@@ -36,8 +36,20 @@ class Product(models.Model):
     @models.permalink
     def get_absolute_url(self):
         return('catalog_product', (), {'product_slug': self.slug})
+
+
+        def __unicode__(self):
+            return self.product.title
+
+
     def sale_price(self):
         if self.old_price> self.price:
             return self.price
         else:
             return None
+class ProductImage(models.Model):
+        product= models.ForeignKey(Product)
+        image= models.ImageField(upload_to='products/images/')
+        featured = models.BooleanField(default=False)
+        thumbnail= models.BooleanField(default=False)
+        updated= models.DateTimeField(auto_now_add=False, auto_now=True)

@@ -1,30 +1,10 @@
 <!doctype html>
+{% load staticfiles %}
 <html class="no-js" lang="zxx">
-
-<head>
-    <meta charset="utf-8">
-    <meta http-equiv="x-ua-compatible" content="ie=edge">
-    <title>Flone - Minimalist eCommerce Bootstrap 4 Template - SHARED ON THEMELOCK.COM</title>
-    <meta name="description" content="">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <!-- Favicon -->
-    <link rel="shortcut icon" type="image/x-icon" href="assets/img/favicon.png">
-    
-    <!-- CSS
-	============================================ -->
-   
-    <!-- Bootstrap CSS -->
-    <link rel="stylesheet" href="assets/css/bootstrap.min.css">
-    <!-- Icon Font CSS -->
-    <link rel="stylesheet" href="assets/css/icons.min.css">
-    <!-- Plugins CSS -->
-    <link rel="stylesheet" href="assets/css/plugins.css">
-    <!-- Main Style CSS -->
-    <link rel="stylesheet" href="assets/css/style.css">
-    <!-- Modernizer JS -->
-    <script src="assets/js/vendor/modernizr-2.8.3.min.js"></script>
-</head>
-
+{% block content %}
+{% include "css.html" %}
+{% include 'header.html' %}
+{% endblock %}
 <body>
 <header class="header-area header-in-container clearfix">
     <div class="header-top-area">
@@ -75,84 +55,7 @@
                 </div>
                 <div class="col-xl-8 col-lg-8 d-none d-lg-block">
                     <div class="main-menu">
-                        <nav>
-                            <ul>
-                                <li><a href="index.html">Home <i class="fa fa-angle-down"></i></a>
-                                    <ul class="submenu">
-                                        <li><a href="index.html">home version 1</a></li>
-                                        <li><a href="index-2.html">home version 2</a></li>
-                                        <li><a href="index-3.html">home version 3</a></li>
-                                        <li><a href="index-4.html">home version 4</a></li>
-                                        <li><a href="index-5.html">home version 5</a></li>
-                                        <li><a href="index-6.html">home version 6</a></li>
-                                        <li><a href="index-7.html">home version 7</a></li>
-                                        <li><a href="index-8.html">home version 8</a></li>
-                                        <li><a href="index-9.html">home version 9</a></li>
-                                        <li><a href="index-10.html">home version 10</a></li>
-                                    </ul>
-                                </li>
-                                <li><a href="shop.html"> Shop <i class="fa fa-angle-down"></i> </a>
-                                    <ul class="mega-menu">
-                                        <li>
-                                            <ul>
-                                                <li class="mega-menu-title"><a href="#">shop layout</a></li>
-                                                <li><a href="shop.html">standard style</a></li>
-                                                <li><a href="shop-filter.html">Grid filter style</a></li>
-                                                <li><a href="shop-grid-2-col.html">Grid 2 column</a></li>
-                                                <li><a href="shop-no-sidebar.html">Grid No sidebar</a></li>
-                                                <li><a href="shop-grid-fw.html">Grid full wide </a></li>
-                                                <li><a href="shop-right-sidebar.html">Grid right sidebar</a></li>
-                                                <li><a href="shop-list.html">list 1 column box </a></li>
-                                                <li><a href="shop-list-fw.html">list 1 column full wide </a></li>
-                                                <li><a href="shop-list-fw-2col.html">list 2 column  full wide</a></li>
-                                            </ul>
-                                        </li>
-                                        <li>
-                                            <ul>
-                                                <li class="mega-menu-title"><a href="#">product details</a></li>
-                                                <li><a href="product-details.html">tab style 1</a></li>
-                                                <li><a href="product-details-2.html">tab style 2</a></li>
-                                                <li><a href="product-details-3.html">tab style 3</a></li>
-                                                <li><a href="product-details-4.html">sticky style</a></li>
-                                                <li><a href="product-details-5.html">gallery style </a></li>
-                                                <li><a href="product-details-slider-box.html">Slider style</a></li>
-                                                <li><a href="product-details-affiliate.html">affiliate style</a></li>
-                                                <li><a href="product-details-6.html">fixed image style </a></li>
-                                            </ul>
-                                        </li>
-                                        <li>
-                                            <ul>
-                                                <li class="mega-menu-img"><a href="shop.html"><img src="assets/img/banner/banner-12.png" alt=""></a></li>
-                                            </ul>
-                                        </li>
-                                    </ul>
-                                </li>
-                                <li><a href="shop.html">Collection</a></li>
-                                <li><a href="#"> Pages <i class="fa fa-angle-down"></i></a>
-                                    <ul class="submenu">
-                                        <li><a href="about.html">about us</a></li>
-                                        <li><a href="cart-page.html">cart page</a></li>
-                                        <li><a href="checkout.html">checkout </a></li>
-                                        <li><a href="wishlist.html">wishlist </a></li>
-                                        <li><a href="my-account.html">my account</a></li>
-                                        <li><a href="login-register.html">login / register </a></li>
-                                        <li><a href="contact.html">contact us </a></li>
-                                    </ul>
-                                </li>
-                                <li><a href="#">Blog <i class="fa fa-angle-down"></i></a>
-                                    <ul class="submenu">
-                                        <li><a href="blog.html">blog standard</a></li>
-                                        <li><a href="blog-no-sidebar.html">blog no sidebar</a></li>
-                                        <li><a href="blog-right-sidebar.html">blog right sidebar</a></li>
-                                        <li><a href="blog-details.html">blog details 1</a></li>
-                                        <li><a href="blog-details-2.html">blog details 2</a></li>
-                                        <li><a href="blog-details-3.html">blog details 3</a></li>
-                                    </ul>
-                                </li>
-                                <li><a href="about.html"> About </a></li>
-                                <li><a href="contact.html"> Contact</a></li>
-                            </ul>
-                        </nav>
+                        {% include 'navbar.html' %}
                     </div>
                 </div>
                 <div class="col-xl-2 col-lg-2 col-md-6 col-8">
@@ -164,7 +67,7 @@
                                     <input type="text" placeholder="Search" />
                                     <button class="button-search"><i class="pe-7s-search"></i></button>
                                 </form>
-                            </div> 
+                            </div>
                         </div>
                         <div class="same-style account-satting">
                             <a class="account-satting-active" href="#"><i class="pe-7s-user-female"></i></a>
@@ -850,13 +753,13 @@
                             <ul>
                                 <li>
                                     <div class="sidebar-widget-list-left">
-                                        <input type="checkbox"> <a href="#">On Sale <span>4</span> </a> 
+                                        <input type="checkbox"> <a href="#">On Sale <span>4</span> </a>
                                         <span class="checkmark"></span>
                                     </div>
                                 </li>
                                 <li>
                                     <div class="sidebar-widget-list-left">
-                                        <input type="checkbox" value=""> <a href="#">New <span>4</span></a> 
+                                        <input type="checkbox" value=""> <a href="#">New <span>4</span></a>
                                         <span class="checkmark"></span>
                                     </div>
                                 </li>
@@ -885,19 +788,19 @@
                                 <li>
                                     <div class="sidebar-widget-list-left">
                                         <input type="checkbox" value=""> <a href="#">Green <span>4</span> </a>
-                                        <span class="checkmark"></span> 
+                                        <span class="checkmark"></span>
                                     </div>
                                 </li>
                                 <li>
                                     <div class="sidebar-widget-list-left">
                                         <input type="checkbox" value=""> <a href="#">Cream <span>4</span> </a>
-                                        <span class="checkmark"></span> 
+                                        <span class="checkmark"></span>
                                     </div>
                                 </li>
                                 <li>
                                     <div class="sidebar-widget-list-left">
                                         <input type="checkbox" value=""> <a href="#">Blue <span>4</span> </a>
-                                        <span class="checkmark"></span> 
+                                        <span class="checkmark"></span>
                                     </div>
                                 </li>
                                 <li>
@@ -916,7 +819,7 @@
                                 <li>
                                     <div class="sidebar-widget-list-left">
                                         <input type="checkbox" value=""> <a href="#">XL</a>
-                                        <span class="checkmark"></span> 
+                                        <span class="checkmark"></span>
                                     </div>
                                 </li>
                                 <li>
@@ -928,13 +831,13 @@
                                 <li>
                                     <div class="sidebar-widget-list-left">
                                         <input type="checkbox" value=""> <a href="#">SM</a>
-                                        <span class="checkmark"></span> 
+                                        <span class="checkmark"></span>
                                     </div>
                                 </li>
                                 <li>
                                     <div class="sidebar-widget-list-left">
                                         <input type="checkbox" value=""> <a href="#">XXL</a>
-                                        <span class="checkmark"></span> 
+                                        <span class="checkmark"></span>
                                     </div>
                                 </li>
                             </ul>
